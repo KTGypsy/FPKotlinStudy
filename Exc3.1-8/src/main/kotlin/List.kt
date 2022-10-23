@@ -47,3 +47,15 @@ fun <A> List<A>.init(): List<A> {
         }
     }
 }
+
+fun <A, B> List<A>.foldRight(z: B, f: (A, B) -> B): B =
+    when (this) {
+        is Nil -> z
+        is Cons -> f(head, tail.foldRight(z, f))
+    }
+
+fun <A> empty(): List<A> = Nil
+
+val <A> List<A>.length: Int
+    get() = foldRight(0) { _, y -> y + 1 }
+
