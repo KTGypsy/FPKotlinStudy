@@ -1,6 +1,6 @@
-include 'Exc2.1'
-include 'Exc2.2'
-include 'Exc2.3-5'
-include 'Exc3.1-8'
-include 'Exc3.9-'
+include ':chapter2'
+include ':chapter3'
+include ':chapter4'
+include ':chapter5'
+include ':chapter6'
 
